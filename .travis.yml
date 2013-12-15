@@ -16,3 +16,6 @@ deploy:
   on:
     repo: sinsoku/knowlage-platform
     branch: deploy
+  run:
+    - "rake db:migrate"
+    - restart
