@@ -1,0 +1,18 @@
+language: ruby
+rvm:
+- 2.0.0
+branches:
+  only:
+  - deploy
+bundler_args: --without development --path vendor/bundle
+script: bundle exec rake db:migrate spec
+notifications:
+  email: false
+deploy:
+  provider: heroku
+  api_key:
+    secure: eOSj+TFCwqP8v0j9x0mZBb6YEtDhR/RmpJVcEZqrCgmMceAVMS7Vgfbx37CDmWZ4vfQgAwStEcAoFvo2qsp0nzCcRztHkPmrPHevJv6ITylGM9ebU2qp1g5H5vbhDAJ+hGPisZhHbwHcsYK9lGtkvPVCr3m30U1m3Ojgcz9pLJA=
+  app: knowlage-platform
+  on:
+    repo: sinsoku/knowlage-platform
+    branch: deploy
