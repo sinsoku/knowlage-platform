@@ -5,8 +5,8 @@
     %meta{content: "width=device-width, initial-scale=1.0", name: "viewport"}/
     %meta{content: "", name: "description"}/
     %meta{content: "", name: "author"}/
-    %link{href: "favicon.png", rel: "shortcut icon"}/
-    %title あなたの疑問に研究者が答える Ask.Reserchers
+    %link{href: "../../assets/ico/favicon.png", rel: "shortcut icon"}/
+    %title Ask.Reserchers
     = stylesheet_link_tag 'https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css'
     = stylesheet_link_tag 'application.css'
   %body
@@ -33,9 +33,9 @@
     = yield
     %footer
       %h4 カテゴリー別リンク
-      - Category.where(parent_id: nil).each do |category|
-        %div
-          %ul{style: "display-style:none; column-count:2; -webkit-column-count: 2;"}
+      %div(style="column-width: 150px; -webkit-column-width: 150px;")
+        - Category.where(parent_id: nil).each do |category|
+          %ul{style: "display-style:none; "}
             %li= link_to category.name, category_questions_path(category)
             %ul
               - category.children.each do |child|
