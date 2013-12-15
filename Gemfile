@@ -44,6 +44,7 @@ end
 group :development, :test do
   gem 'erb2haml'
   gem 'better_errors'
+  gem 'binding_of_caller'
   gem 'factory_girl_rails'
   gem 'pry-nav'
   gem 'pry-rails'
@@ -66,3 +67,4 @@ gem 'omniauth-twitter'
 gem 'simple_form'
 gem 'rails_admin'
 gem 'cancan'
+gem 'ransack'
