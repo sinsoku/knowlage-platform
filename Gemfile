@@ -42,6 +42,8 @@ end
 # gem 'debugger', group: [:development, :test]
 
 group :development, :test do
+  gem 'erb2haml'
+  gem 'better_errors'
   gem 'factory_girl_rails'
   gem 'pry-nav'
   gem 'pry-rails'
@@ -63,3 +65,4 @@ gem 'omniauth-facebook'
 gem 'omniauth-twitter'
 gem 'simple_form'
 gem 'rails_admin'
+gem 'cancan'
