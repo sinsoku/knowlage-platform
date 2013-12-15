@@ -49,6 +49,7 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'sqlite3'
   gem 'dotenv-rails'
+  gem 'shoulda-matchers'
 end
 
 group :production do
@@ -61,3 +62,4 @@ gem 'haml-rails'
 gem 'omniauth-facebook'
 gem 'omniauth-twitter'
 gem 'simple_form'
+gem 'rails_admin'
