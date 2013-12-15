@@ -51,6 +51,11 @@ group :development, :test do
   gem 'dotenv-rails'
 end
 
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
+end
+
 gem 'devise'
 gem 'haml-rails'
 gem 'omniauth-facebook'
